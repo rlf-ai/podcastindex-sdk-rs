@@ -108,7 +108,7 @@ pub struct FeedSearch {
     pub locked: Option<models::Locked>,
     /// A CRC32 hash of the `image` URL with the protocol (`http://`, `https://`) removed.
     #[serde(rename = "imageUrlHash", skip_serializing_if = "Option::is_none")]
-    pub image_url_hash: Option<i32>,
+    pub image_url_hash: Option<i64>,
     /// The time the most recent episode in the feed was published.   Note: some endpoints use `newestItemPubdate` while others use `newestItemPublishTime`.  They return the same information. See https://github.com/Podcastindex-org/api/issues/3 to track when the property name is updated.
     #[serde(rename = "newestItemPubdate", skip_serializing_if = "Option::is_none")]
     pub newest_item_pubdate: Option<i32>,
